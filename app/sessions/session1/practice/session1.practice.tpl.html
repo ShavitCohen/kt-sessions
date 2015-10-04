@@ -1,0 +1,21 @@
+<p>Click on any table cell</p>
+<input type="text" placeholder="First Name" ng-model="newPerson.firstName.value"/> &nbsp;
+<input type="text" placeholder="First Name" ng-model="newPerson.lastName.value"/> &nbsp;
+<input type="text" placeholder="First Name" ng-model="newPerson.age.value"/> &nbsp;
+<button ng-click="addPerson()">+ Add</button>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="person in tableData ">
+      <td ng-click="cellClicked(person.firstName)" ng-class="{selected:person.firstName.selected}">{{person.firstName.value}}</td>
+      <td ng-click="cellClicked(person.lastName)" ng-class="{selected:person.lastName.selected}">{{person.lastName.value}}</td>
+      <td ng-click="cellClicked(person.age)" ng-class="{selected:person.age.selected}">{{person.age.value}}</td>
+    </tr>
+  </tbody>
+</table>

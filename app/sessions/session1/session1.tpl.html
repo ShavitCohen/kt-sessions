@@ -1,0 +1,26 @@
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr ng-repeat="row in table">
+      <td>{{row.firstName}}</td>
+      <td ng-class="{colored:isItColored}">{{row.lastName}}</td>
+      <td>{{row.age}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<label>
+  <input type="checkbox" ng-model="isItColored" />
+  Colored Column
+</label>
+
+
+
