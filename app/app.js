@@ -34,9 +34,19 @@ function config($stateProvider, $urlRouterProvider) {
       controller: 'session1Ctrl'
     })
     .state('session1Practice', {
-      url: '/session',
+      url: '/session1Practice',
       templateUrl: 'sessions/session1/practice/session1.practice.tpl.html',
       controller: 'session1PracticeCtrl'
+    })
+    .state('session2', {
+      url: '/session2',
+      templateUrl: 'sessions/session2/session2.tpl.html',
+      controller: 'session2Ctrl'
+    })
+    .state('session2Practice', {
+      url: '/session2Practice',
+      templateUrl: 'sessions/session2/practice/session2.practice.tpl.html',
+      controller: 'session2PracticeCtrl'
     });
   $urlRouterProvider.when('', '/sessions');
   $urlRouterProvider.otherwise('/sessions');
