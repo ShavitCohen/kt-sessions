@@ -10,8 +10,11 @@
 angular.module('KTPracticeApp')
   .controller('session1Ctrl', session1Ctrl);
 
-session1Ctrl.$inject = ["$scope"];
-function session1Ctrl($scope) {
+session1Ctrl.$inject = ["$scope",'session2Service'];
+function session1Ctrl($scope,session2Service) {
+
+  //We are registering the session2Service to the $scope in order to be able to use it's logic from the template
+  $scope.session2Service = session2Service;
 
   $scope.isItColored = true;
 
