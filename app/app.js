@@ -47,7 +47,17 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/session2Practice',
       templateUrl: 'sessions/session2/practice/session2.practice.tpl.html',
       controller: 'session2PracticeCtrl'
-    });
+    })
+    .state('session3', {
+      url: '/session3',
+      templateUrl: 'sessions/session3/session3.tpl.html',
+      controller: 'session3Ctrl'
+    })
+    .state('session3Practice', {
+      url: '/session3Practice',
+      templateUrl: 'sessions/session3/practice/session3.practice.tpl.html',
+      controller: 'session3PracticeCtrl'
+    })
   $urlRouterProvider.when('', '/sessions');
   $urlRouterProvider.otherwise('/sessions');
 };

@@ -1,1 +1,22 @@
-<div></div>
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" ng-model="query" ng-change="getImages()" placeholder="Find images"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-9">
+      <ul>
+        <li ng-repeat="image in images" class="thumbnail col-xs-6" ng-click="displayImageData(image)">
+          <img src="{{image.tbUrl}}" alt=""/>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-3">
+      <div ng-if="imageData.showData">
+        <strong>Image Name:</strong> {{imageData.name}}
+        <strong>Image Website:</strong> <a href="{{imageData.websiteURL}}" target="_blank">{{imageData.visibleUrl}}</a>
+      </div>
+    </div>
+  </div>
+</div>
