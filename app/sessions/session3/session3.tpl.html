@@ -1,3 +1,19 @@
+<input type="text" ng-model="query" />
+
 <div>
-  Session 3
+  <ul>
+    <li ng-repeat="item in arr | filter: query | filter:longerThen(3)">{{ item | capital}}</li>
+  </ul>
 </div>
+
+<hr/>
+
+<div class="row">
+  <div class="col-xs-6">{{num1}}</div> <div class="col-xs-6">{{num2}}</div>
+</div>
+<div class="row">
+  <div class="col-xs-6"><stepper number="num1"></stepper></div>   <div class="col-xs-6"><stepper number="num2"></stepper></div>
+</div>
+
+
+
