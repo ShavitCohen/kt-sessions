@@ -1,1 +1,25 @@
-<div>Practice</div>
+<div class="row">
+  <div class="square square1 col-xs-4" ng-style="{'background-color':selectedColors.color1.hex}">
+    {{selectedColors.color1.hex}}
+  </div>
+
+  <div class="square square2 col-xs-4" ng-style="{'background-color':selectedColors.color2.hex}">
+    {{selectedColors.color2.hex}}
+  </div>
+
+  <div class="square square3 col-xs-4" ng-style="{'background-color':selectedColors.color3.hex}">
+    {{selectedColors.color3.hex}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <color-picker colors="colors | sliceArray : 0 : 30" selected-color="selectedColors.color1" color-picker-name="color1"></color-picker>
+  </div>
+  <div class="col-xs-4">
+    <color-picker colors="colors | sliceArray : 31 : 60" selected-color="selectedColors.color2" color-picker-name="color2"></color-picker>
+  </div>
+  <div class="col-xs-4">
+    <color-picker colors="colors | sliceArray : 61 : 90" selected-color="selectedColors.color3" color-picker-name="color3"></color-picker>
+  </div>
+</div>

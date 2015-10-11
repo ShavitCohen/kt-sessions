@@ -1,0 +1,12 @@
+<div class="colorPicker">
+  <ul>
+    <li ng-repeat="color in colors">
+
+      <label>
+        <div class="color" ng-style="{'background-color':color.hex}"></div>
+        <input type="radio" name="{{colorPickerName}}" ng-value="color" ng-model="$parent.selectedColor"/>
+        {{color.name}}
+      </label>
+    </li>
+  </ul>
+</div>
