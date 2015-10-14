@@ -58,6 +58,16 @@ function config($stateProvider, $urlRouterProvider) {
       templateUrl: 'sessions/session3/practice/session3.practice.tpl.html',
       controller: 'session3PracticeCtrl'
     })
+    .state('session4', {
+      url: '/session4',
+      templateUrl: 'sessions/session4/session4.tpl.html',
+      controller: 'session4Ctrl'
+    })
+    .state('session4Practice', {
+      url: '/session4Practice',
+      templateUrl: 'sessions/session4/practice/session4.practice.tpl.html',
+      controller: 'session4PracticeCtrl'
+    })
   $urlRouterProvider.when('', '/sessions');
   $urlRouterProvider.otherwise('/sessions');
 };
