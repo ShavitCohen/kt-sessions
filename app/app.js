@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ui.router',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ]);
 
 angular.module("KTPracticeApp")
@@ -67,6 +68,11 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/session4Practice',
       templateUrl: 'sessions/session4/practice/session4.practice.tpl.html',
       controller: 'session4PracticeCtrl'
+    })
+    .state('session5', {
+      url: '/session5',
+      templateUrl: 'sessions/session5/session5.tpl.html',
+      controller: 'session5Ctrl'
     })
   $urlRouterProvider.when('', '/sessions');
   $urlRouterProvider.otherwise('/sessions');
